@@ -2,10 +2,10 @@ from PIL import Image
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument ("input_file")
-parser.add_argument ("width", type=int)
-parser.add_argument ("height", type=int)
-parser.add_argument ("output_file")
+parser.add_argument('input_file', help='ruta del archivo de entrada')
+parser.add_argument('output_file', help='ruta del archivo de salida')
+parser.add_argument('width', help='ancho deseado', type=int)
+parser.add_argument('height', help='altura deseada', type=int)
 args = parser.parse_args()
 
 im = Image.open (args.input_file)
